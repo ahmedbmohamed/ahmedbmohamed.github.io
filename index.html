@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ahmed Ben Mohamed — Cybersecurity engineer (SOC, cloud, AI). Huawei ICT Competition global 2nd prize (Cloud Track), five Red Hat certifications.">
 <title>Ahmed Ben Mohamed — Cybersecurity Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -147,7 +148,7 @@ nav {
 }
 
 .hero-ctas {
-  display: flex; gap:14px; margin-top:40px;
+  display: flex; flex-wrap:wrap; gap:14px; margin-top:40px;
   opacity: 0;
   animation: fadeUp 0.7s 0.8s forwards;
 }
@@ -468,6 +469,52 @@ section {
 .edu-school { font-size:12px; color:var(--cyan); margin-bottom:4px; }
 .edu-year { font-size:11px; color:var(--muted); }
 
+/* EXPERIENCE */
+.exp-list { display:flex; flex-direction:column; gap:20px; }
+.exp-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cyan);
+  padding: 28px 32px;
+}
+.exp-head { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:6px; flex-wrap:wrap; }
+.exp-role { font-family:'Syne',sans-serif; font-size:17px; font-weight:700; color:var(--text); line-height:1.3; }
+.exp-date { font-size:11px; color:var(--muted); letter-spacing:1px; white-space:nowrap; }
+.exp-org { font-size:12px; color:var(--cyan); margin-bottom:16px; }
+.exp-bullets { list-style:none; margin-bottom:18px; }
+.exp-bullets li { position:relative; padding-left:18px; font-size:12px; color:#8a9ab5; line-height:1.8; margin-bottom:6px; }
+.exp-bullets li::before { content:'›'; position:absolute; left:0; color:var(--cyan); }
+@media(max-width:768px) { .exp-card { padding:22px; } }
+
+/* AWARDS & CERT LINKS */
+.award-card {
+  display: flex; gap: 28px; align-items: center;
+  background: var(--bg2);
+  border: 1px solid rgba(255,215,0,0.3);
+  padding: 32px;
+  margin-bottom: 20px;
+  position: relative; overflow: hidden;
+}
+.award-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background: linear-gradient(90deg, #ffd700, var(--orange));
+}
+.award-badge {
+  flex: 0 0 auto;
+  width: 72px; height: 72px; border-radius: 16px;
+  background: linear-gradient(135deg, #b8860b, #ffd700);
+  display:flex; align-items:center; justify-content:center; font-size: 34px;
+}
+.award-title { font-family:'Syne',sans-serif; font-size:18px; font-weight:700; color:var(--text); margin-bottom:6px; line-height:1.3; }
+.award-prize { font-size:12px; color:#ffd700; letter-spacing:1px; margin-bottom:10px; }
+.award-desc { font-size:12px; color:var(--muted); line-height:1.7; }
+.certs-auto { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px; }
+a.cert-card { display:block; text-decoration:none; color:inherit; }
+.cert-view { margin-top:14px; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--cyan); }
+.cert-note { margin-top:18px; font-size:11px; color:var(--muted); }
+.cert-note a { color:var(--cyan); }
+@media(max-width:768px) { .award-card { flex-direction:column; align-items:flex-start; padding:24px; } }
+
 /* CONTACT */
 .contact-inner {
   display: grid;
@@ -571,7 +618,9 @@ footer span { color: var(--cyan); }
 
 @media(max-width:768px) {
   nav { padding:16px 24px; }
-  .nav-links { display:none; }
+  .nav-logo { display:none; }
+  .nav-links { display:flex; gap:20px; width:100%; overflow-x:auto; white-space:nowrap; padding-bottom:2px; }
+  .nav-links a { font-size:10px; letter-spacing:1.5px; }
   .hero { padding: 100px 24px 60px; }
   .hero-visual { display:none; }
   section { padding: 70px 24px; }
@@ -591,6 +640,7 @@ footer span { color: var(--cyan); }
   <div class="nav-logo">ahmed<span>.sec</span></div>
   <div class="nav-links">
     <a href="#about">About</a>
+    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#certifications">Certs</a>
@@ -611,27 +661,29 @@ footer span { color: var(--cyan); }
       <span class="line3">// Cybersecurity Engineer & AI Builder</span>
     </h1>
     <p class="hero-desc">
-      Final-year cybersecurity engineer specialized in AI-powered SOC systems, penetration testing, and network security. Red Hat certified. 🏆 Huawei ICT Regional Winner (Cloud Track) — heading to global finals in China.
+      Cybersecurity engineer specialized in AI-powered SOC systems, penetration testing, network security and cloud. Five Red Hat certifications. 🏆 Huawei ICT Competition — Global 2nd Prize (Cloud Track), representing Tunisia in Shenzhen.
     </p>
     <div class="hero-ctas">
       <a href="#projects" class="btn-primary">View Work →</a>
       <a href="#contact" class="btn-secondary">Get in Touch</a>
+      <a href="Ahmed_Ben_Mohamed_CV_EN.pdf" class="btn-secondary" download>CV · EN ↓</a>
+      <a href="Ahmed_Ben_Mohamed_CV_FR.pdf" class="btn-secondary" download>CV · FR ↓</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">3</div>
+        <div class="stat-num">5</div>
         <div class="stat-label">Red Hat Certs</div>
       </div>
       <div class="stat-item">
         <div class="stat-num" style="color:#ffd700;">🏆</div>
-        <div class="stat-label">Huawei ICT Winner</div>
+        <div class="stat-label">Huawei ICT Global 2nd</div>
       </div>
       <div class="stat-item">
         <div class="stat-num">6+</div>
         <div class="stat-label">Live Projects</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">3</div>
+        <div class="stat-num">4</div>
         <div class="stat-label">Languages</div>
       </div>
     </div>
@@ -657,9 +709,9 @@ footer span { color: var(--cyan); }
   </div>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>I'm a <strong>cybersecurity engineering student</strong> at Tek-Up University, Tunisia, with a background in electronics and automation from ISSIG Gabès. I combine hardware-level understanding with advanced security and AI expertise.</p>
+      <p>I'm a <strong>cybersecurity engineer</strong>, recently graduated from Tek-Up University, Tunisia, with a background in electronics and automation from ISSIG Gabès. I combine hardware-level understanding with advanced security and AI expertise.</p>
       <p>My final year project — an <strong>AI-powered autonomous SOC agent</strong> at Next-Step IT — integrates Wazuh SIEM with dual ML models (98.3% accuracy, AUC 1.0) and LLaMA 3.3 70B to automate incident response in under 35 seconds.</p>
-      <p>🏆 <strong>Huawei ICT Regional Winner</strong> (Cloud Track, Tunisia 2026) — selected for the <strong>Global Finals in China, June 2</strong>. Actively seeking a junior cybersecurity role globally.</p>
+      <p>🏆 <strong>Huawei ICT Competition — Global Second Prize</strong> (Cloud Track, 2026): national selection, 3rd prize at the North Africa regional, then the Global Final in Shenzhen, China, representing Tunisia. Actively seeking a junior cybersecurity or cloud role globally.</p>
       <div class="about-tags">
         <span class="about-tag">Penetration Testing</span>
         <span class="about-tag">SOC / SIEM</span>
@@ -674,11 +726,59 @@ footer span { color: var(--cyan); }
       <div class="info-row"><span class="info-label">Location</span><span class="info-value">Ariana, Tunis 🇹🇳</span></div>
       <div class="info-row"><span class="info-label">University</span><span class="info-value cyan">Tek-Up University</span></div>
       <div class="info-row"><span class="info-label">Internship</span><span class="info-value cyan">Next-Step IT, Tunis</span></div>
-      <div class="info-row"><span class="info-label">🏆 Award</span><span class="info-value" style="color:#ffd700;">Huawei ICT Winner · Cloud</span></div>
-      <div class="info-row"><span class="info-label">Global Finals</span><span class="info-value" style="color:#ffd700;">🇨🇳 China — June 2, 2026</span></div>
+      <div class="info-row"><span class="info-label">🏆 Award</span><span class="info-value" style="color:#ffd700;">Huawei ICT · Global 2nd Prize · Cloud</span></div>
+      <div class="info-row"><span class="info-label">Global Finals</span><span class="info-value" style="color:#ffd700;">🇨🇳 Shenzhen, China — June 2026</span></div>
       <div class="info-row"><span class="info-label">Status</span><span class="info-value green">● Open to Work</span></div>
-      <div class="info-row"><span class="info-label">Languages</span><span class="info-value">AR / FR / EN</span></div>
+      <div class="info-row"><span class="info-label">Languages</span><span class="info-value">AR / FR / EN / DE</span></div>
       <div class="info-row"><span class="info-label">Email</span><span class="info-value cyan">ahmedbenmohamed99@gmail.com</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header reveal">
+    <span class="section-num">02 —</span>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="exp-list">
+    <div class="exp-card reveal">
+      <div class="exp-head">
+        <div class="exp-role">Cybersecurity Engineer — Final Year Internship (PFE)</div>
+        <div class="exp-date">02/2026 – 07/2026</div>
+      </div>
+      <div class="exp-org">Next Step IT · Tunis</div>
+      <ul class="exp-bullets">
+        <li>Built an autonomous SOC platform combining SIEM, machine learning and SOAR to automate security incident detection and response.</li>
+        <li>Developed an AI detection pipeline with Random Forest and Isolation Forest models on real-time Wazuh 4.7.3 alerts.</li>
+        <li>Implemented a SOAR engine performing IP blocking (iptables, FortiGate), network isolation and SSH process termination in under 35 seconds, with no human intervention.</li>
+        <li>Validated against real MITRE ATT&amp;CK techniques with Atomic Red Team; built L1/L2/L3 ticketing with automated PDF incident reports.</li>
+      </ul>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span><span class="proj-tag">Flask</span><span class="proj-tag">scikit-learn</span>
+        <span class="proj-tag">Wazuh</span><span class="proj-tag">OpenSearch</span><span class="proj-tag">Groq API</span>
+        <span class="proj-tag">FortiGate API</span><span class="proj-tag">Paramiko</span><span class="proj-tag">VMware</span>
+      </div>
+    </div>
+    <div class="exp-card reveal">
+      <div class="exp-head">
+        <div class="exp-role">Cybersecurity Audit Intern</div>
+        <div class="exp-date">07/2025 – 08/2025</div>
+      </div>
+      <div class="exp-org">Smart Skills (TAC-TIC Group)</div>
+      <ul class="exp-bullets">
+        <li>Black-box and grey-box penetration testing of a production web platform for a government-sector client, following OWASP Top 10 and WASC-TC methodologies.</li>
+        <li>Identified 10 security defects (2 critical, 2 major), including SQL injection, unauthenticated remote code execution, stored XSS and broken access control.</li>
+        <li>Scored findings with CVSS v3 and conducted ISO/IEC 27001 / MEHARI-based physical security audits across three sites; produced client-facing audit deliverables.</li>
+      </ul>
+      <div class="proj-tags">
+        <span class="proj-tag">Nessus</span><span class="proj-tag">Acunetix</span><span class="proj-tag">OWASP ZAP</span>
+        <span class="proj-tag">Burp Suite</span><span class="proj-tag">Nmap</span><span class="proj-tag">SQLmap</span>
+        <span class="proj-tag">Kali Linux</span><span class="proj-tag">ISO 27001</span>
+      </div>
     </div>
   </div>
 </section>
@@ -688,7 +788,7 @@ footer span { color: var(--cyan); }
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-header reveal">
-    <span class="section-num">02 —</span>
+    <span class="section-num">03 —</span>
     <h2 class="section-title">Skills</h2>
     <div class="section-line"></div>
   </div>
@@ -703,6 +803,9 @@ footer span { color: var(--cyan); }
         <span class="skill-chip">Hydra</span>
         <span class="skill-chip">Kali Linux</span>
         <span class="skill-chip">CVE Exploitation</span>
+        <span class="skill-chip">Burp Suite</span>
+        <span class="skill-chip">Nessus</span>
+        <span class="skill-chip">OWASP ZAP</span>
       </div>
     </div>
     <div class="skill-card green-card reveal">
@@ -715,6 +818,10 @@ footer span { color: var(--cyan); }
         <span class="skill-chip">Threat Hunting</span>
         <span class="skill-chip">Active Response</span>
         <span class="skill-chip">Incident Response</span>
+        <span class="skill-chip">Microsoft Sentinel</span>
+        <span class="skill-chip">Defender</span>
+        <span class="skill-chip">KQL</span>
+        <span class="skill-chip">Splunk</span>
       </div>
     </div>
     <div class="skill-card orange-card reveal">
@@ -727,6 +834,9 @@ footer span { color: var(--cyan); }
         <span class="skill-chip">LLaMA 3.3 70B</span>
         <span class="skill-chip">Groq API</span>
         <span class="skill-chip">Anomaly Detection</span>
+        <span class="skill-chip">PyTorch</span>
+        <span class="skill-chip">Hugging Face</span>
+        <span class="skill-chip">LoRA / RAG</span>
       </div>
     </div>
     <div class="skill-card cyan-card reveal">
@@ -739,6 +849,10 @@ footer span { color: var(--cyan); }
         <span class="skill-chip">ACLs</span>
         <span class="skill-chip">GNS3</span>
         <span class="skill-chip">Cisco Packet Tracer</span>
+        <span class="skill-chip">FortiGate</span>
+        <span class="skill-chip">PacketFence</span>
+        <span class="skill-chip">AAA / RADIUS</span>
+        <span class="skill-chip">Wireshark</span>
       </div>
     </div>
     <div class="skill-card green-card reveal">
@@ -751,6 +865,10 @@ footer span { color: var(--cyan); }
         <span class="skill-chip">Docker</span>
         <span class="skill-chip">VMware</span>
         <span class="skill-chip">ReportLab</span>
+        <span class="skill-chip">Ansible</span>
+        <span class="skill-chip">Podman</span>
+        <span class="skill-chip">Bash</span>
+        <span class="skill-chip">Git</span>
       </div>
     </div>
     <div class="skill-card orange-card reveal">
@@ -763,6 +881,10 @@ footer span { color: var(--cyan); }
         <span class="skill-chip">Risk Assessment</span>
         <span class="skill-chip">VirusTotal API</span>
         <span class="skill-chip">iptables</span>
+        <span class="skill-chip">Azure</span>
+        <span class="skill-chip">AWS</span>
+        <span class="skill-chip">Kubernetes (CCE)</span>
+        <span class="skill-chip">MEHARI</span>
       </div>
     </div>
   </div>
@@ -773,7 +895,7 @@ footer span { color: var(--cyan); }
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-header reveal">
-    <span class="section-num">03 —</span>
+    <span class="section-num">04 —</span>
     <h2 class="section-title">Projects</h2>
     <div class="section-line"></div>
   </div>
@@ -912,41 +1034,63 @@ footer span { color: var(--cyan); }
 <!-- CERTIFICATIONS -->
 <section id="certifications">
   <div class="section-header reveal">
-    <span class="section-num">04 —</span>
+    <span class="section-num">05 —</span>
     <h2 class="section-title">Certifications &amp; Awards</h2>
     <div class="section-line"></div>
   </div>
-  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px;">
-    <div class="cert-card" style="border-color:rgba(255,215,0,0.3);">
-      <div class="cert-logo" style="background:linear-gradient(135deg,#b8860b,#ffd700);font-size:22px;">🏆</div>
-      <div class="cert-name" style="color:#ffd700;">ICT Winner</div>
-      <div class="cert-full">Huawei ICT Competition — Regional Winner · Cloud Track · Tunisia</div>
-      <div class="cert-year" style="background:rgba(255,215,0,0.08);border-color:rgba(255,215,0,0.3);color:#ffd700;">2026 → 🇨🇳 China Finals</div>
+  <div class="award-card reveal">
+    <div class="award-badge">🏆</div>
+    <div>
+      <div class="award-title">Huawei ICT Competition 2025–26 — Global Final, Cloud Track</div>
+      <div class="award-prize">2nd Prize · Practice Competition – Cloud Track · Shenzhen, China · 2026</div>
+      <div class="award-desc">Represented Tunisia: national selection → 3rd prize at the North Africa regional → Global Final. Team of three in an 8-hour hands-on lab on Huawei Cloud covering cloud infrastructure, containers and AI (ModelArts).</div>
+      <div class="award-desc" style="margin-top:8px;">Certificate No. ICTC20260102000062 · issued June 5, 2026 · TEK-UP Private College of Engineering &amp; Technology</div>
+      <a class="cert-view" style="display:inline-block;text-decoration:none;" href="huawei-ict-2026-global-second-prize.jpg" target="_blank" rel="noopener">View certificate →</a>
     </div>
-    <div class="cert-card">
+  </div>
+  <div class="certs-auto">
+    <a class="cert-card" href="rhcsa.jpg" target="_blank" rel="noopener">
       <div class="cert-logo">RH</div>
       <div class="cert-name">RHCSA</div>
       <div class="cert-full">Red Hat Certified System Administrator</div>
       <div class="cert-year">2024</div>
-    </div>
-    <div class="cert-card">
+      <div class="cert-view">View certificate →</div>
+    </a>
+    <a class="cert-card" href="rhce.jpg" target="_blank" rel="noopener">
       <div class="cert-logo">RH</div>
       <div class="cert-name">RHCE</div>
       <div class="cert-full">Red Hat Certified Engineer</div>
       <div class="cert-year">2025</div>
-    </div>
-    <div class="cert-card">
+      <div class="cert-view">View certificate →</div>
+    </a>
+    <a class="cert-card" href="rh-containers.jpg" target="_blank" rel="noopener">
       <div class="cert-logo">RH</div>
-      <div class="cert-name">RHCSC</div>
+      <div class="cert-name">Containers</div>
       <div class="cert-full">Red Hat Certified Specialist in Containers</div>
       <div class="cert-year">2025</div>
-    </div>
+      <div class="cert-view">View certificate →</div>
+    </a>
+    <a class="cert-card" href="https://rhtapps.redhat.com/verify?certId=240-234-609" target="_blank" rel="noopener">
+      <div class="cert-logo">RH</div>
+      <div class="cert-name">Ansible</div>
+      <div class="cert-full">Red Hat Certified Engineer &amp; Advanced System Administrator in Ansible</div>
+      <div class="cert-year">2025</div>
+      <div class="cert-view">Verify on Red Hat →</div>
+    </a>
+    <a class="cert-card" href="https://rhtapps.redhat.com/verify?certId=240-234-609" target="_blank" rel="noopener">
+      <div class="cert-logo">RH</div>
+      <div class="cert-name">Cloud-native</div>
+      <div class="cert-full">Red Hat Certified Developer in Cloud-native Applications</div>
+      <div class="cert-year">2025</div>
+      <div class="cert-view">Verify on Red Hat →</div>
+    </a>
   </div>
+  <p class="cert-note">All Red Hat certifications can be verified with Red Hat ID 240-234-609 — <a href="https://rhtapps.redhat.com/verify?certId=240-234-609" target="_blank" rel="noopener">verify on redhat.com</a>.</p>
   <div class="edu-cards">
     <div class="edu-card">
-      <div class="edu-degree">B.Eng. Cybersecurity Engineering</div>
+      <div class="edu-degree">Engineering Degree — Security of Computer Systems &amp; Networks (SSIR)</div>
       <div class="edu-school">Tek-Up University, Tunisia</div>
-      <div class="edu-year">2023 – Present (Final Year)</div>
+      <div class="edu-year">2023 – 2026</div>
     </div>
     <div class="edu-card">
       <div class="edu-degree">Bachelor in Electronics, Electrotechnics &amp; Automation</div>
@@ -961,7 +1105,7 @@ footer span { color: var(--cyan); }
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-header reveal">
-    <span class="section-num">05 —</span>
+    <span class="section-num">06 —</span>
     <h2 class="section-title">Contact</h2>
     <div class="section-line"></div>
   </div>
@@ -984,11 +1128,18 @@ footer span { color: var(--cyan); }
             <div class="contact-link-value">+216 99 802 525</div>
           </div>
         </a>
-        <a href="https://linkedin.com/in/ahmed-ben-mohamed" target="_blank" class="contact-link">
+        <a href="https://www.linkedin.com/in/ahmed-benmohamed-71b243309/" target="_blank" class="contact-link">
           <div class="contact-link-icon">💼</div>
           <div class="contact-link-info">
             <div class="contact-link-label">LinkedIn</div>
-            <div class="contact-link-value">linkedin.com/in/ahmed-ben-mohamed</div>
+            <div class="contact-link-value">linkedin.com/in/ahmed-benmohamed-71b243309</div>
+          </div>
+        </a>
+        <a href="https://github.com/ahmedbmohamed" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">🐙</div>
+          <div class="contact-link-info">
+            <div class="contact-link-label">GitHub</div>
+            <div class="contact-link-value">github.com/ahmedbmohamed</div>
           </div>
         </a>
       </div>
